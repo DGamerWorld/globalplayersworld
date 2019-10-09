@@ -1,0 +1,13 @@
+{
+	"ndk_module_path" :[
+		"../CrazyMo",
+		"../CrazyMo/android",
+		"../CrazyMo/ui"
+	],
+	"copy_resources": [
+		{
+			"from": "../Resources",
+			"to": ""
+		}
+	]
+}
