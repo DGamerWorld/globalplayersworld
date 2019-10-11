@@ -11,7 +11,7 @@ bool GChatTalking = false;
 
 void GameAppInitOnce()
 {
-	if (GMyApplicationRunFirst == false) return;	
+	if (GMyApplicationRunFirst == false) return;	// AndroidCreated
 	GMyApplicationRunFirst = false;
 
 	uint32 Year, Month, Day, Hour, Minute, Second; char lg[256];
@@ -19,8 +19,8 @@ void GameAppInitOnce()
 	sprintf(lg, "\r\n  {GameAppInitOnce begin Year=%u,Month=%u,Day=%u,Hour=%u,Minute=%u}", Year, Month, Day, Hour, Minute);
 	_log(lg);
 
-	AnsicToUnicodeInit();	
-	FileUtilsInit();		
+	AnsicToUnicodeInit();	// 
+	FileUtilsInit();		// 
 	RAND_init();
 	ECC_Start();
 	SocketInit();
@@ -31,9 +31,9 @@ void GameAppInitOnce()
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
 #else
 	FileUtilsCreateDirectory((char*)(&BCI_ADMIN_MAIN));
-#endif 
+#endif // CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
 
-	
+	//+message
 	char c[2048], s[200]; int i; uint32 fileSize;
 	for (i=0; i<=0xff; ++i)
 	{
@@ -43,19 +43,19 @@ void GameAppInitOnce()
 	if (fileData)
 	{
 		char* xml = SAFE_NEW_ARRAY(char, fileSize + 1);
-		int xpos = 0, xlen = XmlGetBlockNodeByKey(xml, xpos, "message", fileData, fileSize);	
-		int ypos = 0, ylen = XmlGetBlockNodeByKey(c, ypos, "msg", &xml[ypos], xlen - ypos);	
+		int xpos = 0, xlen = XmlGetBlockNodeByKey(xml, xpos, "message", fileData, fileSize);	// message
+		int ypos = 0, ylen = XmlGetBlockNodeByKey(c, ypos, "msg", &xml[ypos], xlen - ypos);	// msg
 		while (ylen >= 0)
 		{
 			uint8 id = XmlGetIntFromBodyByKey(c, ylen, "id", 0);
 			XmlGetStringFromBodyByKey(s, c, ylen, "text", "");
 			memcpy(GMessage63[id], s, 63);
 
-			ylen = XmlGetBlockNodeByKey(c, ypos, "msg", &xml[ypos], xlen - ypos);	
+			ylen = XmlGetBlockNodeByKey(c, ypos, "msg", &xml[ypos], xlen - ypos);	// msg
 		}
 		SAFE_DELETE_ARRAY(xml);
 	}
-	
+	//-message
 
 	GUITextureSystem.setTextureName("sys.png");
 	_log("  {GameAppInitOnce end}\r\n");
@@ -74,21 +74,21 @@ void GameApplicationRelease()
 	SAFE_DELETE_ARRAY(GWalletLists);
 	SocketRTMPRelease();
 }
-void GameAppUpdateBySecond()	
+void GameAppUpdateBySecond()	// 
 {
 }
-void GameAppUpdateByMillisecond(uint32 tmSubMs)	
+void GameAppUpdateByMillisecond(uint32 tmSubMs)	// 
 {
 	GUITextureSystem.recreateTexture(false);
 
-
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)	
+//	GGameStateTime += tmSubMs;
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)	// xml
 	char txt[256], tmp[200];
-	strcpy(txt, "XMBC - ");
-
+	strcpy(txt, "XMBC - ");// UnicodeToAnsic(tmp, 200, GBaseMyPlyinfo->uniName8); strcat(txt, tmp);
+//	swprintf(wTxt, L"¡¤ [%s][%u] - %s", GBaseServerName, GBaseGameGroupID, GBaseMyPlyinfo->ChnName);
 extern HWND GMainHwnd;
-	SetWindowTextA(GMainHwnd, txt);	
-#endif 
+	SetWindowTextA(GMainHwnd, txt);	// ,.,
+#endif // CC_TARGET_PLATFORM == CC_PLATFORM_WIN32
 }
 void GameAppRender(uint32 tmSubMs)
 {
@@ -111,9 +111,9 @@ void GameAppMoveEnd(uint32 tmSubMs)
 				WalletDownAdd(GWalletLists[0].BCILists[i], GWalletLists[0].Wallet48, 1, 0);
 			}
 			strcpy(GIpIpNode, "202.69.69.180"); GPortNode = 443;
-		
+		//	strcpy(GIpIpNode, "192.168.0.82"); GPortNode = 1935;
 			SocketRTMPCreate(GIpIpNode, GPortNode);
-		
+		//	SocketGameCreate(GIpIpNode, GPortNode);
 
 			UICloseAll();
 			UIShowWinID(WINDOW_MAIN);
@@ -149,7 +149,7 @@ void GameAppMoveEnd(uint32 tmSubMs)
 	case EGAMESTATUS::eGSCreateInit:
 		{
 			GGameStatus = EGAMESTATUS::eGSCreateRun;
-			if (GSocketGameLoginOk == false) SocketGameCreate(GIpIpNode, GPortNode);	
+			if (GSocketGameLoginOk == false) SocketGameCreate(GIpIpNode, GPortNode);	// ip
 		}
 		break;
 	case EGAMESTATUS::eGSEmptyRun:
@@ -157,24 +157,45 @@ void GameAppMoveEnd(uint32 tmSubMs)
 		}
 		break;
 	}
-	
+	//+
 	WalletDownMain();
-	
+	//-
 }
-void GameAppMouseButtonLeftClick(uint8 id, float ptx, float pty)	
+void GameAppMouseButtonLeftClick(uint8 id, float ptx, float pty)	// 
 {
 }
 void GameUIRenderAfter(uint32 tmSubMs)
 {
-	
+	//+
+/*	if (GOpenGLMouseLeftButtonDown[0])	// 
+	{
+		if (GChatTalking)
+		{
+			GTextureChatTalk.drawTexture(VIDEOMODE_HALF_WIDE - GTextureChatTalk._texWide/2, VIDEOMODE_HALF_HIGH - GTextureChatTalk._texHigh/2);
+		}
+	}else if (GChatTalking) {	// 
+		GChatTalking = false;
+		RecorderStop();
+		LPUIFlash pFsh = (LPUIFlash)UIGetControl(WINDOW_MAIN, MAIN_FSH_CHATTYPE);
+		switch (pFsh->CurrFrame)
+		{
+		case 0: GMyTalkUpUpType[GMyBaseInfo.TalkID] = ISLAND_CHAT_FREE;  break;
+		case 1: GMyTalkUpUpType[GMyBaseInfo.TalkID] = ISLAND_CHAT_WORLD; break;
+		case 2: GMyTalkUpUpType[GMyBaseInfo.TalkID] = ISLAND_CHAT_TEAM;  break;
+		case 3: GMyTalkUpUpType[GMyBaseInfo.TalkID] = ISLAND_CHAT_ALLY;  break;
+		}
+		++GMyBaseInfo.TalkID;
+		SocketSendMsgToConn(ISLAND_CHAT_TALK, 0, 0);
+	}*/
+	//-
 }
 
-uint16 SocketGameGetLoginDataThread(char Json[], bool IsRec)	
+uint16 SocketGameGetLoginDataThread(char Json[], bool IsRec)	// 
 {
-	if ((GWalletCount > 0) && (GWalletLists[0].WalPub63[0]))	
+	if ((GWalletCount > 0) && (GWalletLists[0].WalPub63[0]))	// 
 	{
 		return sprintf(Json, "{eType=%s,package=BLOCKCHAIN,version=%u,author=chunguiMoo,company=HXM,wallet=%s,pub=%s}", (char*)(&SYSID_SERVERLOGIN), BLOCKCHAIN_VERSION, GWalletLists[0].Wallet48, GWalletLists[0].WalPub63);
-	}else if (GWalletCount > 0) {	
+	}else if (GWalletCount > 0) {	// ,
 		return sprintf(Json, "{eType=%s,package=BLOCKCHAIN,version=%u,author=chunguiMoo,company=HXM,wallet=%s,pub=%s}", (char*)(&SYSID_SERVERLOGIN), BLOCKCHAIN_VERSION, GWalletLists[0].Wallet48, GWalletLists[0].WalPub63);
 	}else {
 		return 0;

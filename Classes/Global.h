@@ -7,22 +7,22 @@
 
 #define COIN_ZERO_SIZE							1000000
 
-
+//+
 extern uint64	GMyBCI;
 
-extern uint64	GMyToValu;									
-extern char		GMyToWaltChar[256];							
-extern uint8	GMyToWaltByte[256];							
+extern uint64	GMyToValu;									// 
+extern char		GMyToWaltChar[256];							// 
+extern uint8	GMyToWaltByte[256];							// 
 extern char		GMyThridWallet[256];
 extern uint32	GMyThridID;
 bool WalletRead();
 void WalletWrite();
-
-
+//-
+//+IP
 extern char   GIpIpNode[256];
 extern char   GIpIpHttp[256];
 extern uint16 GPortNode, GPortHttp;
-
+//-IP
 
 class EGAMESTATUS
 {
@@ -42,10 +42,10 @@ enum EGameStatus
 };
 extern EGAMESTATUS::EGameStatus GGameStatus;
 
-
+//+message
 extern char GMessage63[256][63+1];
-
-
+//-message
+//+
 void WalletDownRelease();
 void WalletDownMain();
 void WalletDownAdd(uint64 bci, const char wallet[48], uint32 bkBgn, uint32 bkEnd);
@@ -53,13 +53,13 @@ void WalletDownDel(uint64 bci, const char wallet[48]);
 void WalletDownSetMaxBlock(uint64 bci, const char wallet[48], uint32 mxbk);
 void WalletDownSetCurBlock(uint64 bci, const char wallet[48], uint32 cubk);
 uint8 WalletDownGet(uint64 bci, const char wallet[48]);
-
-
+//-
+//+Key Store
 void KeyStoreSet(UIListPtr lst, const uint8 SecretKey[32], bool Paste);
 void KeyStoreGet(uint8 SecretKey[32], const char Keys[]);
 bool KeyStoreOkk(const char Keys[48], const uint8 SecretKey[32]);
 bool KeyStoreOkk(const char Keys[48]);
-
+//-Key Store
 
 class CWALLET;
 extern CWALLET*	GWalletLists;
@@ -99,14 +99,14 @@ public:
 		return GWalletLists;
 	}
 
-	uint8	WalSecret[32];									
-	char	Name36[36+4];									
-	char	Wallet48[48+4];									
-	uint8	WalSecPsw[32];									
-	char	WalPub63[63+1];									
-	char	WalSecSig[256];									
-	char	WalPlan[256];									
-	uint8	WalType;										
+	uint8	WalSecret[32];									// 
+	char	Name36[36+4];									// 
+	char	Wallet48[48+4];									// 
+	uint8	WalSecPsw[32];									// 
+	char	WalPub63[63+1];									// 
+	char	WalSecSig[256];									// 
+	char	WalPlan[256];									// 
+	uint8	WalType;										//  A or B
 	bool	Created;
 
 	uint64*	BCILists;
@@ -129,4 +129,4 @@ public:
 	}
 };
 
-#endif 
+#endif // _CRAZYMO_GLOBAL_H_

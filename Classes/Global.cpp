@@ -1,26 +1,26 @@
 #include "Global.h"
 
-
+//+
 uint64	GMyBCI = 0;
 
-uint64	GMyToValu = 0;										
-char	GMyToWaltChar[256] = {0};							
-uint8	GMyToWaltByte[256] = {0};							
+uint64	GMyToValu = 0;										// 
+char	GMyToWaltChar[256] = {0};							// 
+uint8	GMyToWaltByte[256] = {0};							// 
 char	GMyThridWallet[256] = {0};
 uint32	GMyThridID = 0;
 
 CWALLET*	GWalletLists = new CWALLET[1];
 uint32		GWalletCount = 0;
-
-
+//-
+//+IP
 char   GIpIpNode[256] = {0};
 char   GIpIpHttp[256] = {0};
 uint16 GPortNode = 0, GPortHttp = 0;
-
+//-IP
 EGAMESTATUS::EGameStatus GGameStatus = EGAMESTATUS::eGSUIInit;
-
+//+message
 char GMessage63[256][63+1];
-
+//-message
 
 void TipsGoodsRenderCall(uint16 GdsID, short GdsX, short GdsY)
 {
@@ -29,13 +29,13 @@ void TipsSkillRenderCall(uint16 SkiID, short SkiX, short SkiY)
 {
 }
 
-
+//+
 bool WalletRead()
 {
 	uint32 fileSize;
 	char* fileData = (char*)FileUtilsGetDataFileMain("BlockChain.conf", fileSize);
 	if (fileData == 0) return false;
-	
+	// \r\n=>\n
 	fileSize = CharRNToN(fileData, fileSize);
 	int bgn = 0, cur = 0; char outs[256];
 	for ( ; cur<fileSize; ++cur)
@@ -63,11 +63,11 @@ bool WalletRead()
 	if (fileData)
 	{
 		char *xml = SAFE_NEW_ARRAY(char, fileSize + 1), c[1024], s[256]; uint8 b[256];
-		int xpos = 0, xlen = XmlGetBlockNodeByKey(xml, xpos, "wallet", fileData, fileSize);	
-		int ypos = 0, ylen = XmlGetBlockNodeByKey(c, ypos, "wal", &xml[ypos], xlen - ypos);	
+		int xpos = 0, xlen = XmlGetBlockNodeByKey(xml, xpos, "wallet", fileData, fileSize);	// wallet
+		int ypos = 0, ylen = XmlGetBlockNodeByKey(c, ypos, "wal", &xml[ypos], xlen - ypos);	// wal
 		while (ylen >= 0)
 		{
-		
+		//	uint8 id = XmlGetIntFromBodyByKey(c, ylen, "id", 0);
 			CWALLET *p = CWALLET::Add();
 			p->WalType = XmlGetIntFromBodyByKey(c, ylen, "type", 0);
 			XmlGetStringFromBodyByKey(s, c, ylen, "name", "");
@@ -82,17 +82,17 @@ bool WalletRead()
 			for (int i=0; i<32; ++i) {p->WalSecPsw[i] = b[i];}
 
 			p->BCICount = 0; p->BCILists = new uint64[1];
-			int zpos = 0, zlen = XmlGetBlockNodeByKey(s, zpos, "bci", &c[zpos], ylen - zpos);	
+			int zpos = 0, zlen = XmlGetBlockNodeByKey(s, zpos, "bci", &c[zpos], ylen - zpos);	// bci
 			while (zlen >= 0)
 			{
 				uint64 *n = p->BCIAdd(); char a[256];
 				XmlGetStringFromBodyByKey(a, s, zlen, "name", "");
 				*n = CharCharUInt64(a);
 
-				zlen = XmlGetBlockNodeByKey(s, zpos, "bci", &c[zpos], ylen - zpos);	
+				zlen = XmlGetBlockNodeByKey(s, zpos, "bci", &c[zpos], ylen - zpos);	// bci
 			}
 
-			ylen = XmlGetBlockNodeByKey(c, ypos, "wal", &xml[ypos], xlen - ypos);	
+			ylen = XmlGetBlockNodeByKey(c, ypos, "wal", &xml[ypos], xlen - ypos);	// wal
 		}
 		SAFE_DELETE_ARRAY(xml);
 	}
@@ -118,4 +118,4 @@ void WalletWrite()
 	strcat(GJson64K, "</wallet>");
 	FileUtilsSaveTextToFile("wallet.txt", GJson64K);
 }
-
+//-
