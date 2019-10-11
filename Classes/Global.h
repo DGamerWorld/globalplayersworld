@@ -7,22 +7,22 @@
 
 #define COIN_ZERO_SIZE							1000000
 
-//+当前钱包
+
 extern uint64	GMyBCI;
 
-extern uint64	GMyToValu;									// 交易给的钱
-extern char		GMyToWaltChar[256];							// 交易给的钱包地址
-extern uint8	GMyToWaltByte[256];							// 交易给的钱包地址
+extern uint64	GMyToValu;									
+extern char		GMyToWaltChar[256];							
+extern uint8	GMyToWaltByte[256];							
 extern char		GMyThridWallet[256];
 extern uint32	GMyThridID;
 bool WalletRead();
 void WalletWrite();
-//-当前钱包
-//+IP
+
+
 extern char   GIpIpNode[256];
 extern char   GIpIpHttp[256];
 extern uint16 GPortNode, GPortHttp;
-//-IP
+
 
 class EGAMESTATUS
 {
@@ -42,10 +42,10 @@ enum EGameStatus
 };
 extern EGAMESTATUS::EGameStatus GGameStatus;
 
-//+message
+
 extern char GMessage63[256][63+1];
-//-message
-//+钱包下载
+
+
 void WalletDownRelease();
 void WalletDownMain();
 void WalletDownAdd(uint64 bci, const char wallet[48], uint32 bkBgn, uint32 bkEnd);
@@ -53,13 +53,13 @@ void WalletDownDel(uint64 bci, const char wallet[48]);
 void WalletDownSetMaxBlock(uint64 bci, const char wallet[48], uint32 mxbk);
 void WalletDownSetCurBlock(uint64 bci, const char wallet[48], uint32 cubk);
 uint8 WalletDownGet(uint64 bci, const char wallet[48]);
-//-钱包下载
-//+Key Store
+
+
 void KeyStoreSet(UIListPtr lst, const uint8 SecretKey[32], bool Paste);
 void KeyStoreGet(uint8 SecretKey[32], const char Keys[]);
 bool KeyStoreOkk(const char Keys[48], const uint8 SecretKey[32]);
 bool KeyStoreOkk(const char Keys[48]);
-//-Key Store
+
 
 class CWALLET;
 extern CWALLET*	GWalletLists;
@@ -99,14 +99,14 @@ public:
 		return GWalletLists;
 	}
 
-	uint8	WalSecret[32];									// 私钥
-	char	Name36[36+4];									// 钱包名称
-	char	Wallet48[48+4];									// 钱包地址
-	uint8	WalSecPsw[32];									// 私钥与密码的异或
-	char	WalPub63[63+1];									// 公钥
-	char	WalSecSig[256];									// 私钥签名
-	char	WalPlan[256];									// 密码提示
-	uint8	WalType;										// 类型 A or B
+	uint8	WalSecret[32];									
+	char	Name36[36+4];									
+	char	Wallet48[48+4];									
+	uint8	WalSecPsw[32];									
+	char	WalPub63[63+1];									
+	char	WalSecSig[256];									
+	char	WalPlan[256];									
+	uint8	WalType;										
 	bool	Created;
 
 	uint64*	BCILists;
@@ -129,4 +129,4 @@ public:
 	}
 };
 
-#endif // _CRAZYMO_GLOBAL_H_
+#endif 
