@@ -1,9 +1,9 @@
 #include "Global.h"
 
-void GameAppMouseButtonLeftUIUp()	// 点了UI鼠标抬起的应用层响应
+void GameAppMouseButtonLeftUIUp()	// UI
 {
 }
-void GameAppMouseButtonLeftNoUp()	// 这里是没点UI鼠标抬起 应用层响应鼠标弹起
+void GameAppMouseButtonLeftNoUp()	// UI 
 {
 }
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)

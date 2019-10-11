@@ -1,17 +1,17 @@
 #include "Global.h"
 
-//+当前钱包
+//+
 uint64	GMyBCI = 0;
 
-uint64	GMyToValu = 0;										// 交易给的钱
-char	GMyToWaltChar[256] = {0};							// 交易给的钱包地址
-uint8	GMyToWaltByte[256] = {0};							// 交易给的钱包地址
+uint64	GMyToValu = 0;										// 
+char	GMyToWaltChar[256] = {0};							// 
+uint8	GMyToWaltByte[256] = {0};							// 
 char	GMyThridWallet[256] = {0};
 uint32	GMyThridID = 0;
 
 CWALLET*	GWalletLists = new CWALLET[1];
 uint32		GWalletCount = 0;
-//-当前钱包
+//-
 //+IP
 char   GIpIpNode[256] = {0};
 char   GIpIpHttp[256] = {0};
@@ -29,7 +29,7 @@ void TipsSkillRenderCall(uint16 SkiID, short SkiX, short SkiY)
 {
 }
 
-//+读取和保存最近一次登录账号
+//+
 bool WalletRead()
 {
 	uint32 fileSize;
@@ -118,4 +118,4 @@ void WalletWrite()
 	strcat(GJson64K, "</wallet>");
 	FileUtilsSaveTextToFile("wallet.txt", GJson64K);
 }
-//-读取和保存最近一次登录账号
+//-

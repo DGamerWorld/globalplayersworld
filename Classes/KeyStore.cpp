@@ -261,7 +261,7 @@ void KeyStoreGet(uint8 SecretKey[32], const char Keys[])
 		else if ((Keys[i] >= 'A') && (Keys[i] <= 'Z')) {s[n] = Keys[i]; ++n;}
 		else if (n > 0) {
 			s[n] = 0; n = 0; bool Fnd = false;
-			for (uint64 j=0; j<2048; ++j)	// j一定要定义为64位因为下面有移位
+			for (uint64 j=0; j<2048; ++j)	// j64
 			{
 				if (CharEqualNoCase(s, GKeyStore[j]) == true)
 				{
@@ -291,7 +291,7 @@ bool KeyStoreOkk(const char Keys[], const uint8 SecretKey[32])
 		else if ((Keys[i] >= 'A') && (Keys[i] <= 'Z')) {s[n] = Keys[i]; ++n;}
 		else if (n > 0) {
 			s[n] = 0; n = 0; bool Fnd = false;
-			for (uint64 j=0; j<2048; ++j)	// j一定要定义为64位因为下面有移位
+			for (uint64 j=0; j<2048; ++j)	// j64
 			{
 				if (CharEqualNoCase(s, GKeyStore[j]) == true)
 				{

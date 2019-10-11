@@ -11,7 +11,7 @@ bool GChatTalking = false;
 
 void GameAppInitOnce()
 {
-	if (GMyApplicationRunFirst == false) return;	// 为了Android每次切换都要Created设计的
+	if (GMyApplicationRunFirst == false) return;	// AndroidCreated
 	GMyApplicationRunFirst = false;
 
 	uint32 Year, Month, Day, Hour, Minute, Second; char lg[256];
@@ -19,8 +19,8 @@ void GameAppInitOnce()
 	sprintf(lg, "\r\n  {GameAppInitOnce begin Year=%u,Month=%u,Day=%u,Hour=%u,Minute=%u}", Year, Month, Day, Hour, Minute);
 	_log(lg);
 
-	AnsicToUnicodeInit();	// 初始字库
-	FileUtilsInit();		// 初始文件目录
+	AnsicToUnicodeInit();	// 
+	FileUtilsInit();		// 
 	RAND_init();
 	ECC_Start();
 	SocketInit();
@@ -74,20 +74,20 @@ void GameApplicationRelease()
 	SAFE_DELETE_ARRAY(GWalletLists);
 	SocketRTMPRelease();
 }
-void GameAppUpdateBySecond()	// 一秒通知一次
+void GameAppUpdateBySecond()	// 
 {
 }
-void GameAppUpdateByMillisecond(uint32 tmSubMs)	// 毫秒通知
+void GameAppUpdateByMillisecond(uint32 tmSubMs)	// 
 {
 	GUITextureSystem.recreateTexture(false);
 
 //	GGameStateTime += tmSubMs;
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)	// 检测xml是否正确
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)	// xml
 	char txt[256], tmp[200];
 	strcpy(txt, "XMBC - ");// UnicodeToAnsic(tmp, 200, GBaseMyPlyinfo->uniName8); strcat(txt, tmp);
-//	swprintf(wTxt, L"千年·不灭 [%s][%u] - %s", GBaseServerName, GBaseGameGroupID, GBaseMyPlyinfo->ChnName);
+//	swprintf(wTxt, L"· [%s][%u] - %s", GBaseServerName, GBaseGameGroupID, GBaseMyPlyinfo->ChnName);
 extern HWND GMainHwnd;
-	SetWindowTextA(GMainHwnd, txt);	// 这种微软的窗口操作不能放在线程里面,否则要引起假死.还是那句话,微软的东西很多都是垃圾
+	SetWindowTextA(GMainHwnd, txt);	// ,.,
 #endif // CC_TARGET_PLATFORM == CC_PLATFORM_WIN32
 }
 void GameAppRender(uint32 tmSubMs)
@@ -149,7 +149,7 @@ void GameAppMoveEnd(uint32 tmSubMs)
 	case EGAMESTATUS::eGSCreateInit:
 		{
 			GGameStatus = EGAMESTATUS::eGSCreateRun;
-			if (GSocketGameLoginOk == false) SocketGameCreate(GIpIpNode, GPortNode);	// 还没登陆就要设定ip
+			if (GSocketGameLoginOk == false) SocketGameCreate(GIpIpNode, GPortNode);	// ip
 		}
 		break;
 	case EGAMESTATUS::eGSEmptyRun:
@@ -157,23 +157,23 @@ void GameAppMoveEnd(uint32 tmSubMs)
 		}
 		break;
 	}
-	//+钱包下载
+	//+
 	WalletDownMain();
-	//-钱包下载
+	//-
 }
-void GameAppMouseButtonLeftClick(uint8 id, float ptx, float pty)	// 应用程序响应鼠标按下
+void GameAppMouseButtonLeftClick(uint8 id, float ptx, float pty)	// 
 {
 }
 void GameUIRenderAfter(uint32 tmSubMs)
 {
-	//+语音
-/*	if (GOpenGLMouseLeftButtonDown[0])	// 鼠标按下
+	//+
+/*	if (GOpenGLMouseLeftButtonDown[0])	// 
 	{
 		if (GChatTalking)
 		{
 			GTextureChatTalk.drawTexture(VIDEOMODE_HALF_WIDE - GTextureChatTalk._texWide/2, VIDEOMODE_HALF_HIGH - GTextureChatTalk._texHigh/2);
 		}
-	}else if (GChatTalking) {	// 鼠标抬起在语音
+	}else if (GChatTalking) {	// 
 		GChatTalking = false;
 		RecorderStop();
 		LPUIFlash pFsh = (LPUIFlash)UIGetControl(WINDOW_MAIN, MAIN_FSH_CHATTYPE);
@@ -187,15 +187,15 @@ void GameUIRenderAfter(uint32 tmSubMs)
 		++GMyBaseInfo.TalkID;
 		SocketSendMsgToConn(ISLAND_CHAT_TALK, 0, 0);
 	}*/
-	//-语音
+	//-
 }
 
-uint16 SocketGameGetLoginDataThread(char Json[], bool IsRec)	// 获取登录信息
+uint16 SocketGameGetLoginDataThread(char Json[], bool IsRec)	// 
 {
-	if ((GWalletCount > 0) && (GWalletLists[0].WalPub63[0]))	// 开始有钱包就用原来的登陆
+	if ((GWalletCount > 0) && (GWalletLists[0].WalPub63[0]))	// 
 	{
 		return sprintf(Json, "{eType=%s,package=BLOCKCHAIN,version=%u,author=chunguiMoo,company=HXM,wallet=%s,pub=%s}", (char*)(&SYSID_SERVERLOGIN), BLOCKCHAIN_VERSION, GWalletLists[0].Wallet48, GWalletLists[0].WalPub63);
-	}else if (GWalletCount > 0) {	// 如果一开始没钱包,这里创建了就用最新钱包登陆
+	}else if (GWalletCount > 0) {	// ,
 		return sprintf(Json, "{eType=%s,package=BLOCKCHAIN,version=%u,author=chunguiMoo,company=HXM,wallet=%s,pub=%s}", (char*)(&SYSID_SERVERLOGIN), BLOCKCHAIN_VERSION, GWalletLists[0].Wallet48, GWalletLists[0].WalPub63);
 	}else {
 		return 0;
