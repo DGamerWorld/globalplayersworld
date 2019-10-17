@@ -1,0 +1,510 @@
+<ui w="720" h="1280">
+ <win id="0" name="主窗口" tex="ui/0.png" layer="bottom">
+  <item id="0" name="详细" type="ctrl"  rect="0,520,720,1160" linehigh="150" linewide="29,125,280,460,690" img0="743,554,748,559" img1="743,560,748,565" align="上中"/>
+  <item id="1" name="顶景" type="picture" rect="0,0,720,539" img0="0,1,750,540" align="上中"/>
+  <item id="2" name="名称" type="label" rect="185,230,700,260" font="#1A3688#20" align="上中"/>
+  <item id="3" name="钱包" type="label" rect="185,288,700,318" font="#8AAEFA#14" align="上中"/>
+  <item id="4" name="资金" type="label" rect="240,422,700,472" font="#1A3688#28" align="上中"/>
+  <item id="5" name="资产" type="button" rect="0,1175,361,1280" img0="1,554,56,632" img1="1,554,56,632" img2="1,554,56,632|1,1" im9g="687,627,692,632" align="下中"/>
+  <item id="6" name="我的" type="button" rect="360,1175,720,1280" img0="175,554,230,632" img1="175,554,230,632" img2="175,554,230,632|1,1" im9g="687,627,692,632" align="下中"/>
+  <item id="7" name="选择" type="button" rect="30,70,90,130" img0="627,586,682,633" img1="627,586,682,633" img2="627,586,682,633|1,1"/>
+  <item id="8" name="添加" type="button" rect="630,70,690,130" img0="573,581,624,633" img1="573,581,624,633" img2="573,581,624,633|1,1"/>
+ </win>
+
+ <win id="1" name="区块" tex="ui/1.png">
+  <item id="0" name="顶景" type="picture" rect="0,80,720,420" img0="0,0,750,340" align="上中"/>
+  <item id="1" name="记录" type="picture" rect="25,420,182,446" img0="373,345,530,371" align="上中"/>
+  <item id="2" name="返回" type="button"  rect="25,80,85,140" img0="711,343,743,405" img1="711,343,743,405" img2="711,343,743,405|1,1" align="上中"/>
+  <item id="3" name="类型" type="label" rect="100,93,610,130" font="#4D5B6D#2C" align="上中" style="中"/>
+  <item id="4" name="资产" type="label" rect="270,210,720,240" font="#4D5B6D#28" align="上中"/>
+  <item id="5" name="资金" type="label" rect="270,262,720,300" font="#1A3688#21" align="上中"/>
+  <item id="6" name="详细" type="ctrl"  rect="0,460,720,1100" linehigh="92" linewide="25,85,495,630,705,720" img0="746,345,747,346" img1="746,350,747,351" align="上中"/>
+  <item id="7" name="收入" type="picture" rect="0,0,44,44" img0="1,345,45,389" visibled="false"/>
+  <item id="8" name="支出" type="picture" rect="0,0,44,44" img0="46,345,90,389" visibled="false"/>
+  <item id="9" name="矿图" type="picture" rect="0,0,44,44" img0="1,391,45,435" visibled="false"/>
+  <item id="10" name="转账" type="button" rect="0,1180,361,1280" img0="137,345,252,394" img1="137,345,252,394" img2="137,345,252,394|1,1" im1g="137,345,138,346" align="下中"/>
+  <item id="11" name="收款" type="button" rect="360,1180,720,1280" img0="255,345,370,394" img1="255,345,370,394" img2="255,345,370,394|1,1" im1g="255,345,256,346" align="下中"/>
+  <item id="12" name="更多" type="button" rect="303,1110,416,1132" img0="373,374,486,396" img1="373,374,486,396" img2="373,374,486,396|1,1" align="上中"/>
+  <item id="13" name="确认" type="picture" rect="0,0,74,92" img0="533,344,607,436" visibled="false"/>
+  <item id="14" name="确认" type="picture" rect="0,0,74,92" img0="609,344,683,436" visibled="false"/>
+  <item id="15" name="确认" type="picture" rect="0,0,76,92" img0="488,376,530,418" visibled="false"/>
+ </win>
+
+ <win id="2" name="转账" tex="ui/2.png">
+  <item id="0" name="返回" type="button"  rect="25,80,75,140" img0="100,1,139,40" img1="100,1,139,40" img2="100,1,139,40|1,1" align="上中"/>
+  <item id="1" name="返回" type="button"  rect="640,80,700,140" img0="100,42,154,96" img1="100,42,154,96" img2="100,42,154,96|1,1" align="上中"/>
+  <item id="2" name="转账" type="label" rect="100,90,610,130" font="#4D5B6D#28" align="上中" style="中"/>
+  <item id="3" name="线条" type="picture" rect="0,200,720,201" img0="156,3,157,4" align="上中" style="缩放"/>
+  <item id="4" name="收线" type="progress" rect="30,300,690,340" img0="252,1,253,2" align="上中" style="不显数字"/>
+  <item id="5" name="收钱" type="edit"  rect="30,300,690,340" font="#BBBBBB#20" talk="收款人钱包地址"/>
+  <item id="6" name="线条" type="picture" rect="30,350,690,351" img0="156,3,157,4" align="上中" style="缩放"/>
+  <item id="7" name="金额" type="edit"  rect="30,400,690,440" font="#BBBBBB#20" talk="转账金额"/>
+  <item id="8" name="线条" type="picture" rect="30,450,690,451" img0="156,3,157,4" align="上中" style="缩放"/>
+  <item id="9" name="备注" type="edit"  rect="30,500,690,540" font="#BBBBBB#20" talk="备注"/>
+  <item id="10" name="线条" type="picture" rect="30,550,690,551" img0="156,3,157,4" align="上中" style="缩放"/>
+  <item id="11" name="下步" type="button" rect="100,1050,620,1121" img0="2,2,85,30" img1="2,2,85,30" img2="2,2,85,30|1,1" im3g="1,34,98,160" align="下中"/>
+  <item id="12" name="粘贴" type="button" rect="15,250,80,285" img0="134,124,198,167" img1="134,124,198,167" img2="134,124,198,167" align="上中" visibled="false"/>
+  <item id="13" name="信息" type="label" rect="30,960,690,980" font="#000000#1E" align="下中"/>
+ </win>
+
+ <win id="3" name="收款" tex="ui/3.png">
+  <item id="0" name="白板" type="picture" rect="0,0,720,1280" img0="60,190,61,191" style="缩放"/>
+  <item id="1" name="顶景" type="picture" rect="0,0,720,999" img0="0,1,750,1000" align="上中"/>
+  <item id="2" name="返回" type="button"  rect="25,71,65,110" img0="40,71,80,110" img1="40,71,80,110" img2="40,71,80,110|1,1" align="上中" close="3"/>
+  <item id="3" name="名称" type="label" rect="200,265,720,300" font="#1A3688#20" align="上中"/>
+  <item id="4" name="钱包" type="label" rect="200,315,720,350" font="#8AAEFA#17" align="上中"/>
+  <item id="5" name="复制" type="button" rect="250,1000,650,1100" img0="289,1059,461,1090" img1="289,1059,461,1090" img2="289,1059,461,1090|1,1" im3g="90,1035,154,1140|0,9" align="下中"/>
+ </win>
+
+ <win id="4" name="交易" tex="ui/4.png">
+  <item id="0" name="记录" type="picture" rect="292,107,293,137" img0="0,145,136,178" align="上中"/>
+  <item id="1" name="线条" type="picture" rect="0,160,720,162" img0="244,1,246,3" align="上中" style="缩放"/>
+  <item id="2" name="顶景" type="picture" rect="250,200,470,344" img0="1,1,220,145" align="上中"/>
+  <item id="3" name="返回" type="button"  rect="25,90,65,144" img0="221,1,241,39|10,8" img1="221,1,241,39|10,8" img2="221,1,241,39|11,9" align="上中"/>
+  <item id="4" name="资金" type="label" rect="0,335,400,365" font="#1A3688#24" align="上中" style="右" text="1,000,000.3208"/>
+  <item id="5" name="类型" type="label" rect="410,340,700,370" font="#878F9A#1D" align="上中" text="GCN"/>
+  <item id="6" name="线条" type="picture" rect="0,400,720,402" img0="244,1,246,3" align="上中" style="缩放"/>
+
+  <item id="7"  name="发款" type="picture" rect="50,430,51,431" img0="55,179,138,207" align="上中"/>
+  <item id="8"  name="钱包" type="label" rect="55,470,720,500" font="#B3B3B3#1A" align="上中"/>
+  <item id="9"  name="收款" type="picture" rect="50,530,51,531" img0="139,179,222,207" align="上中"/>
+  <item id="10" name="钱包" type="label" rect="55,570,720,600" font="#B3B3B3#1A" align="上中"/>
+  <item id="11" name="备注" type="picture" rect="50,630,51,631" img0="137,147,193,175" align="上中"/>
+  <item id="12" name="备注" type="label" rect="55,670,720,700" font="#B3B3B3#1A" align="上中"/>
+  <item id="13" name="交号" type="picture" rect="50,730,51,631" img0="140,207,224,235" align="上中"/>
+  <item id="14" name="交号" type="label" rect="55,770,720,800" font="#B3B3B3#1A" align="上中"/>
+  <item id="15" name="区块" type="picture" rect="50,830,51,831" img0="0,179,54,206" align="上中"/>
+  <item id="16" name="区块" type="label" rect="55,870,720,900" font="#B3B3B3#1A" align="上中"/>
+  <item id="17" name="时间" type="picture" rect="50,930,51,931" img0="28,207,139,235" align="上中"/>
+  <item id="18" name="时间" type="label" rect="55,970,720,1000" font="#B3B3B3#1A" align="上中"/>
+  <item id="19" name="二维" type="picture" rect="70,1030,71,1031" img0="2,287,126,441" align="上中"/>
+  <item id="20" name="URL " type="button"  rect="55,1185,215,1234" img0="2,237,162,285" img1="2,237,162,285" img2="2,237,162,285|1,1" align="上中"/>
+ </win>
+
+ <win id="5" name="我的" tex="ui/5.png">
+  <item id="0" name="白板" type="picture" rect="0,0,720,1280" img0="729,436,731,438" style="缩放"/>
+  <item id="1" name="蓝板" type="picture" rect="0,0,720,387" img0="0,0,750,387|-15,0" align="上中"/>
+  <item id="2" name="我的" type="picture" rect="326,70,393,104" img0="624,389,691,423" align="上中"/>
+  <item id="3" name="管理" type="button" rect="140,190,250,295" img0="2,388,112,492" img1="1,388,113,492" img2="1,388,113,492|1,1" align="上左"/>
+  <item id="4" name="记录" type="button" rect="470,190,580,295" img0="114,388,224,492" img1="114,388,224,492" img2="114,388,224,492|1,1" align="上右"/>
+
+  <item id="5" name="消息" type="button" rect="0,387,720,487" img0="227,389,404,422|-210,0" img1="227,389,404,422|-210,0" img2="227,389,404,422|-211,1" im9g="711,444,716,449" align="上中"/>
+  <item id="6" name="头景" type="picture" rect="650,424,620,474" img0="716,397,730,425" align="上中"/>
+  <item id="7" name="联系" type="button" rect="0,487,720,587" img0="227,426,376,465|-224,0" img1="227,426,376,465|-224,0" img2="227,426,376,465|-225,1" im9g="711,444,716,449" align="上中"/>
+  <item id="8" name="头景" type="picture" rect="650,524,620,574" img0="716,397,730,425" align="上中"/>
+  <item id="9" name="设置" type="button" rect="0,587,720,687" img0="227,469,403,503|-210,0" img1="227,469,403,503|-210,0" img2="227,469,403,503|-211,1" im9g="711,444,716,449" align="上中"/>
+  <item id="10" name="头景" type="picture" rect="650,624,620,674" img0="716,397,730,425" align="上中"/>
+
+  <item id="11" name="个人" type="button" rect="0,707,720,807" img0="408,389,585,424|-210,0" img1="408,389,585,424|-210,0" img2="408,389,585,424|-211,1" im9g="711,444,716,449" align="上中"/>
+  <item id="12" name="头景" type="picture" rect="650,744,620,794" img0="716,397,730,425" align="上中"/>
+
+  <item id="13" name="帮助" type="button" rect="0,827,720,927" img0="380,428,557,463|-210,0" img1="380,428,557,463|-210,0" img2="380,428,557,463|-211,1" im9g="711,444,716,449" align="上中"/>
+  <item id="14" name="头景" type="picture" rect="650,864,620,914" img0="716,397,730,425" align="上中"/>
+  <item id="15" name="关于" type="button" rect="0,927,720,1027" img0="407,467,582,502|-211,0" img1="407,467,582,502|-211,0" img2="407,467,582,502|-212,1" im9g="711,444,716,449" align="上中"/>
+  <item id="16" name="头景" type="picture" rect="650,964,620,1014" img0="716,397,730,425" align="上中"/>
+  <item id="17" name="资产" type="button" rect="0,1175,361,1280"  img0="586,425,641,502" img1="586,425,641,502" img2="586,425,641,502|1,1" im9g="711,444,716,449" align="下中"/>
+  <item id="18" name="我的" type="button" rect="360,1175,720,1280" img0="645,425,700,502" img1="645,425,700,502" img2="645,425,700,502" im9g="711,444,716,449" align="下中"/>
+ </win>
+
+ <win id="10" name="边框" tex="ui/10.png" black="true">
+  <item id="0" name="白板" type="picture" rect="0,0,446,1280" img0="1,1,2,2" style="缩放"/>
+  <item id="1" name="灰板" type="picture" rect="0,180,446,300" img0="210,1,211,2" style="缩放"/>
+  <item id="2" name="头景" type="picture" rect="20,192,121,287" img0="210,1,306,96"/>
+  <item id="3" name="名称" type="label" rect="150,220,446,260" font="#000000#28"/>
+  <item id="4" name="扫扫" type="button" rect="0,330,446,430" img0="1,1,207,41|-71,0" img1="1,1,207,41|-71,0" img2="1,1,207,41|-70,1"/>
+  <item id="5" name="线条" type="picture" rect="0,430,446,431" img0="360,1,361,2" style="缩放"/>
+  <item id="6" name="创建" type="button" rect="0,440,446,540" img0="1,42,207,82|-71,0" img1="1,42,207,82|-71,0" img2="1,42,207,82|-70,1"/>
+  <item id="7" name="线条" type="picture" rect="0,540,446,541" img0="360,1,361,2" style="缩放"/>
+  <item id="8" name="切换" type="button" rect="0,550,446,650" img0="1,83,207,122|-71,0" img1="1,83,207,122|-71,0" img2="1,83,207,122|-70,1"/>
+  <item id="9" name="线条" type="picture" rect="0,640,446,641" img0="360,1,361,2" style="缩放"/>
+ </win>
+
+ <win id="11" name="创建" tex="ui/11.png">
+  <item id="0" name="红板" type="picture" rect="0,130,720,240" img0="425,1,426,2" style="缩放" align="上中"/>
+  <item id="1" name="创包" type="picture" rect="280,65,415,97" img0="355,86,490,118" align="上中"/>
+  <item id="2" name="提示" type="picture" rect="30,160,578,224" img0="1,163,549,227" align="上中"/>
+  <item id="3" name="条款" type="picture" rect="30,700,511,731" img0="1,53,482,84" align="上中"/>
+  <item id="4" name="返回" type="button" rect="20,50,80,110" img0="491,73,521,133" img1="491,73,521,133" img2="491,73,521,133|1,1" align="上中"/>
+  <item id="5" name="包名" type="edit" rect="30,300,690,340" font="#BBBBBB#20" talk="钱包名称" align="上中"/>
+  <item id="6" name="密码" type="edit" rect="30,400,690,440" font="#BBBBBB#20" talk="密码" align="上中"/>
+  <item id="7" name="重密" type="edit" rect="30,500,690,540" font="#BBBBBB#20" talk="重复密码" align="上中"/>
+  <item id="8" name="密提" type="edit" rect="30,600,690,640" font="#BBBBBB#20" talk="密码提示信息（可不填）" align="上中"/>
+  <item id="9" name="条款" type="check" rect="30,700,500,730" img0="481,1,511,31" img3="" sel="true" align="上中"/>
+  <item id="10" name="创建" type="button" rect="0,1180,361,1280" img0="2,86,176,134" img1="2,86,176,134" img2="2,86,176,134" im1g="170,86,171,87" align="下中"/>
+  <item id="11" name="导入" type="button" rect="360,1180,720,1280" img0="179,86,353,134" img1="179,86,353,134" img2="179,86,353,134" im1g="346,86,347,87" align="下中"/>
+  <item id="12" name="信息" type="label" rect="30,1000,690,1050" font="#000000#1E" align="下中"/>
+  <item id="13" name="线条" type="picture" rect="30,360,690,361" img0="505,161,506,162" style="缩放"/>
+  <item id="14" name="线条" type="picture" rect="30,460,690,461" img0="505,161,506,162" style="缩放"/>
+  <item id="15" name="线条" type="picture" rect="30,560,690,561" img0="505,161,506,162" style="缩放"/>
+  <item id="16" name="线条" type="picture" rect="30,660,690,661" img0="505,161,506,162" style="缩放"/>
+ </win>
+
+ <win id="12" name="输密" tex="ui/12.png" align="居中" black="true">
+  <item id="0" name="白板" type="picture" rect="0,0,480,320" img0="143,1,154,12" style="九宫图"/>
+  <item id="1" name="密板" type="picture" rect="75,135,405,195" img0="145,17,157,29" style="九宫图"/>
+  <item id="2" name="标题" type="picture" rect="170,45,171,46" img0="1,1,140,29"/>
+  <item id="3" name="提示" type="picture" rect="95,95,96,96" img0="1,33,285,60"/>
+  <item id="4" name="密码" type="edit" rect="90,150,405,210" font="#BBBBBB#20"/>
+  <item id="5" name="确认" type="button" rect="75,245,215,287" img0="1,63,141,105" img1="1,63,141,105" img2="1,63,141,105|1,1"/>
+  <item id="6" name="取消" type="button" rect="265,245,405,287" img0="143,63,283,105" img1="143,63,283,105" img2="143,63,283,105|1,1" close="12"/>
+  <item id="7" name="信息" type="label" rect="30,210,450,230" font="#000000#14"/>
+ </win>
+
+ <win id="13" name="+bci" tex="ui/13.png">
+  <item id="0" name="红板" type="picture" rect="300,64,470,97" img0="1,1,171,34" align="上中"/>
+  <item id="1" name="线条" type="picture" rect="0,130,720,132" img0="241,37,243,39" style="缩放" align="上中"/>
+  <item id="2" name="关闭" type="button" rect="20,60,70,110" img0="215,215,254,254" img1="215,215,254,254" img2="215,215,254,254|1,1" align="上左"/>
+  <item id="3" name="搜索" type="button" rect="650,50,700,110" img0="166,206,213,254" img1="166,206,213,254" img2="166,206,213,254|1,1" align="上右"/>
+  <item id="4" name="详细" type="ctrl"  rect="30,140,695,1200" linehigh="120" linewide="0,100,550,800,880,920" img0="238,34,243,39" img1="238,34,243,39" align="上中"/>
+  <item id="5" name="提示" type="check" rect="0,0,0,0" img0="1,35,110,118" img3="112,35,222,118" visibled="false"/>
+ </win>
+
+ <win id="14" name="导入" tex="ui/14.png">
+  <item id="0" name="白版" type="picture" rect="0,0,720,1280" img0="15,15,16,16" style="缩放"/>
+  <item id="1" name="导包" type="picture" rect="274,60,445,103" img0="36,106,207,149" align="上中"/>
+  <item id="2" name="条款" type="picture" rect="40,980,520,1011" img0="1,1,481,32" align="下中"/>
+  <item id="3" name="输框" type="picture" rect="40,250,680,450" img0="446,101,456,111" style="9宫" align="上中"/>
+  <item id="4" name="返回" type="button" rect="20,50,80,110" img0="516,36,547,96" img1="516,36,547,96" img2="516,36,547,96|1,1" align="上左" close="14"/>
+  <item id="5" name="搜索" type="button" rect="630,50,690,110" img0="460,36,514,90" img1="460,36,514,90" img2="460,36,514,90|1,1" align="上右"/>
+  <item id="6" name="助记" type="button" rect="0,130,361,210" img0="128,36,216,66" img1="128,36,216,66" img2="128,36,216,66|1,1" im9g="436,101,441,110" align="上中"/>
+  <item id="7" name="私钥" type="button" rect="360,130,720,210" img0="220,36,278,66" img1="220,36,278,66" img2="220,36,278,66|1,1" im9g="436,101,441,110" align="上中"/>
+  <item id="8" name="助记" type="button" rect="0,130,361,210" img0="36,36,124,66" img1="36,36,124,66" img2="36,36,124,66|1,1" im9g="426,101,431,106" align="上中"/>
+  <item id="9" name="私钥" type="button" rect="360,130,720,210" img0="282,36,340,66" img1="282,36,340,66" img2="282,36,340,66|1,1" im9g="426,101,431,106" align="上中"/>
+  <item id="10" name="主私" type="edit" rect="50,260,670,340" font="#BBBBBB#1B" talk="输入主私钥" align="上中"/>
+  <item id="11" name="副私" type="edit" rect="50,360,670,440" font="#BBBBBB#1B" talk="输入副私钥" align="上中"/>
+  <item id="12" name="粘贴" type="button" rect="60,220,100,260" img0="460,36,493,69" img1="460,36,493,69" img2="460,36,493,69|1,1" align="上中"/>
+  <item id="13" name="粘贴" type="button" rect="60,320,100,360" img0="460,36,493,69" img1="460,36,493,69" img2="460,36,493,69|1,1" align="上中"/>
+
+  <item id="14" name="包名" type="edit" rect="40,490,680,540" font="#BBBBBB#20" talk="钱包名称" align="上中"/>
+  <item id="15" name="线条" type="picture" rect="40,550,680,551" img0="428,101,429,102" style="缩放" align="上中"/>
+  <item id="16" name="密码" type="edit" rect="40,590,680,640" font="#BBBBBB#20" talk="密码" align="上中"/>
+  <item id="17" name="线条" type="picture" rect="40,650,680,651" img0="428,101,429,102" style="缩放" align="上中"/>
+  <item id="18" name="重密" type="edit" rect="40,690,680,740" font="#BBBBBB#20" talk="重复密码" align="上中"/>
+  <item id="19" name="线条" type="picture" rect="40,750,680,751" img0="428,101,429,102" style="缩放" align="上中"/>
+  <item id="20" name="密提" type="edit" rect="40,790,680,840" font="#BBBBBB#20" talk="密码提示信息（可不填）" align="上中"/>
+  <item id="21" name="线条" type="picture" rect="40,850,680,851" img0="428,101,429,102" style="缩放" align="上中"/>
+
+  <item id="22" name="条款" type="check" rect="40,980,520,1011" img0="1,43,32,74" img3="1,1,32,32" sel="true" align="下中"/>
+  <item id="23" name="主副" type="check" rect="59,1020,215,1052" img3="229,118,385,150" img0="389,118,545,150" sel="true" align="下中"/>
+  <item id="24" name="开始" type="button" rect="0,1100,520,1170" img0="344,36,456,64" img1="344,36,456,64" img2="344,36,456,64|1,1" img3="344,68,456,96" im9g="2,98,24,120" align="下中"/>
+  <item id="25" name="助记" type="button" rect="281,1200,438,1250" img0="36,70,193,104" img1="36,70,193,104" img2="36,70,193,104|1,1" align="下中"/>
+  <item id="26" name="私钥" type="button" rect="293,1200,426,1250" img0="197,70,330,104" img1="197,70,330,104" img2="197,70,330,104|1,1" align="下中"/>
+  <item id="27" name="信息" type="label" rect="40,1040,650,1070" font="#000000#1E"/>
+  <item id="28" name="单词" type="label" rect="50,260,670,440" font="#000000#18" herf="true" align="上中"/>
+ </win>
+
+ <win id="15" name="管包" tex="ui/15.png">
+  <item id="0" name="灰板" type="picture" rect="0,130,720,1280" img0="142,143,143,144" style="缩放" align="上中"/>
+  <item id="1" name="管包" type="picture" rect="292,64,427,97" img0="119,1,254,34" align="上中"/>
+  <item id="2" name="关闭" type="button" rect="20,60,70,110" img0="119,143,138,180" img1="119,143,138,180" img2="119,143,138,180|1,1" align="上左"/>
+  <item id="3" name="详细" type="ctrl" rect="30,160,690,1160" linehigh="250" lnespace="20" linewide="20,145,200,640" img0="2,2,115,252" img1="2,2,115,252" align="上中"/>
+  <item id="4" name="创建" type="button" rect="0,1180,361,1280" img0="119,37,295,86" img1="119,37,295,86" img2="119,37,295,86" im1g="119,37,120,38" align="下中"/>
+  <item id="5" name="导入" type="button" rect="360,1180,720,1280" img0="119,89,295,138" img1="119,89,295,138" img2="119,89,295,138" im1g="119,89,120,90" align="下中"/>
+  <item id="6" name="头框" type="picture" rect="0,0,112,111" img0="183,141,295,252" visibled="false"/>
+ </win>
+
+ <win id="16" name="换号" tex="ui/16.png">
+  <item id="0" name="换号" type="picture" rect="292,64,427,97" img0="1,1,136,34" align="上中"/>
+  <item id="1" name="线条" type="picture" rect="30,149,690,150" img0="130,37,131,38" style="缩放" align="上中"/>
+  <item id="2" name="关闭" type="button" rect="20,60,70,110" img0="139,2,177,40" img1="139,2,177,40" img2="139,2,177,40|1,1" align="上左"/>
+  <item id="3" name="详细" type="ctrl" rect="30,150,690,1280" linehigh="100" linewide="10,600,720" img0="118,35,123,40" img1="118,35,123,40" align="上中"/>
+  <item id="4" name="勾勾" type="picture" rect="0,0,50,34" img0="180,2,230,36" visibled="false"/>
+ </win>
+
+ <win id="17" name="明细" tex="ui/17.png">
+  <item id="0" name="灰板" type="picture" rect="0,130,720,1100" img0="124,2,125,3" style="缩放" align="上中"/>
+  <item id="1" name="名称" type="label" rect="100,69,620,90" font="#000000#1E" style="居中" align="上中"/>
+  <item id="2" name="关闭" type="button" rect="20,60,70,110" img0="137,1,156,38" img1="137,1,156,38" img2="137,1,156,38|1,1" align="上左"/>
+  <item id="3" name="更多" type="button" rect="306,1160,414,1182" img0="1,1,109,23" img1="1,1,109,23" img2="1,1,109,23|1,1" align="上中"/>
+  <item id="4" name="详细" type="ctrl" rect="0,150,720,1100" linehigh="100" linewide="30,90,200,690" img0="114,1,115,11" img1="114,1,115,11" align="上中"/>
+  <item id="5" name="收入" type="picture" rect="0,0,44,45" img0="1,26,45,70" visibled="false"/>
+  <item id="6" name="支出" type="picture" rect="0,0,44,45" img0="46,26,90,70" visibled="false"/>
+  <item id="7" name="错误" type="picture" rect="0,0,44,45" img0="91,26,135,70" visibled="false"/>
+ </win>
+
+ <win id="18" name="改密" tex="ui/18.png">
+  <item id="0" name="灰板" type="picture" rect="0,440,720,1280" img0="404,4,405,5" style="缩放" align="上中"/>
+  <item id="1" name="改密" type="picture" rect="293,64,427,97" img0="1,27,135,60" align="上中"/>
+  <item id="2" name="关闭" type="button" rect="20,60,70,110" img0="397,26,416,63" img1="397,26,416,63" img2="397,26,416,63|1,1" align="上左"/>
+  <item id="3" name="完成" type="button" rect="610,60,680,95" img0="139,27,206,60" img1="139,27,206,60" img2="139,27,206,60|1,1" align="上右"/>
+  <item id="4" name="线条" type="picture" rect="0,139,720,140" img0="387,29,388,30" style="缩放" align="上中"/>
+  <item id="5" name="旧密" type="edit" rect="40,180,680,230" font="#BBBBBB#20" talk="当前密码" align="上中"/>
+  <item id="6" name="线条" type="picture" rect="40,240,680,241" img0="387,29,388,30" style="缩放" align="上中"/>
+  <item id="7" name="新密" type="edit" rect="40,280,680,330" font="#BBBBBB#20" talk="新密码" align="上中"/>
+  <item id="8" name="线条" type="picture" rect="40,340,680,341" img0="387,29,388,30" style="缩放" align="上中"/>
+  <item id="9" name="重密" type="edit" rect="40,380,680,430" font="#BBBBBB#20" talk="重复密码" align="上中"/>
+  <item id="10" name="线条" type="picture" rect="40,440,680,441" img0="387,29,388,30" style="缩放" align="上中"/>
+  <item id="11" name="提示" type="picture" rect="40,480,448,502" img0="1,1,409,23" align="上中"/>
+  <item id="12" name="导入" type="button" rect="450,480,539,507" img0="210,27,299,54" img1="210,27,299,54" img2="210,27,299,54|1,1" align="上中"/>
+  <item id="13" name="信息" type="label" rect="40,1040,650,1070" font="#000000#1E"/>
+ </win>
+
+ <win id="19" name="钱包" tex="ui/19.png">
+  <item id="0" name="顶景" type="images" rect="0,0,720,467" img="ui/0_bk.png" align="上中"/>
+  <item id="1" name="办理" type="picture" rect="328,68,392,99" img0="184,76,248,107" align="上中"/>
+  <item id="2" name="关闭" type="button" rect="20,60,70,110" img0="184,36,203,73" img1="184,36,203,73" img2="184,36,203,73|1,1" align="上左"/>
+  <item id="3" name="保存" type="button" rect="610,60,680,110" img0="184,108,248,139" img1="184,108,248,139" img2="184,108,248,139|1,1" align="上右"/>
+  <item id="4" name="灰板" type="picture" rect="0,467,720,1280" img0="224,1,225,2" style="缩放" align="上中"/>
+  <item id="5" name="包名" type="button" rect="0,467,720,567" img0="1,1,149,33|-247,0" img1="1,1,149,33|-247,0" img2="1,1,149,33|-247,0" im9g="214,2,220,8" align="上中"/>
+  <item id="6" name="密提" type="button" rect="0,567,720,667" img0="1,34,180,69|-231,0" img1="1,34,180,69|-231,0" img2="1,34,180,69|-231,0" im9g="214,2,220,8" align="上中"/>
+  <item id="7" name="改密" type="button" rect="0,667,720,767" img0="1,71,180,106|-231,0" img1="1,71,180,106|-231,0" img2="1,71,180,106|-230,1" im9g="214,2,220,8" align="上中"/>
+  <item id="8" name="出私" type="button" rect="0,767,720,867" img0="1,107,180,140|-231,0" img1="1,107,180,140|-231,0" img2="1,107,180,140|-230,1" im9g="214,2,220,8" align="上中"/>
+  <item id="9" name="出字" type="button" rect="0,867,720,967" img0="1,143,243,177|-200,0" img1="1,143,243,177|-200,0" img2="1,143,243,177|-199,1" im9g="214,2,220,8" align="上中"/>
+  <item id="10" name="备助" type="button" rect="0,1180,361,1280" img0="1,181,201,230" img1="1,181,201,230" img2="1,181,201,230|1,1" im1g="1,181,2,182" align="下中"/>
+  <item id="11" name="删包" type="button" rect="360,1180,720,1280" img0="1,234,175,283" img1="1,234,175,283" img2="1,234,175,283|1,1" im1g="1,234,2,235" align="下中"/>
+  <item id="12" name="名称" type="label" rect="190,250,700,280" font="#1A3688#20" align="上中"/>
+  <item id="13" name="钱包" type="label" rect="190,308,650,338" font="#8AAEFA#16" align="上中"/>
+  <item id="14" name="包名" type="edit" rect="250,500,700,540" font="#C2CDDB#20" align="上中"/>
+  <item id="15" name="密提" type="label" rect="250,600,700,640" font="#C2CDDB#20" align="上中" text="123456密码"/>
+ </win>
+
+ <win id="20" name="助词" tex="ui/20.png" align="居中" black="true">
+  <item id="0" name="换号" type="picture" rect="0,0,480,320" img0="0,0,480,320"/>
+  <item id="1" name="确定" type="button" rect="304,238,445,281" img0="304,238,445,281" img1="304,238,445,281" img2="304,238,445,281|1,1" close="20"/>
+ </win>
+
+ <win id="21" name="导私" tex="ui/21.png" align="居中" black="true">
+  <item id="0" name="换号" type="picture" rect="0,0,480,400" img0="0,0,480,400"/>
+  <item id="1" name="关闭" type="button" rect="425,7,465,47" img0="425,7,465,47" img1="425,7,465,47" img2="425,7,465,47|1,1" close="21"/>
+  <item id="2" name="确定" type="button" rect="28,300,451,361" img0="28,300,451,361" img1="28,300,451,361" img2="28,300,451,361|1,1"/>
+  <item id="3" name="私钥" type="label" rect="33,194,443,262" font="#4D5B6D#20"/>
+ </win>
+
+ <win id="22" name="钱包" tex="ui/22.png">
+  <item id="0" name="白板" type="picture" rect="0,0,720,1280" img0="1,1,2,2" style="缩放"/>
+  <item id="1" name="换号" type="picture" rect="0,31,720,1249" img0="0,0,720,1218" align="上中"/>
+  <item id="2" name="关闭" type="button" rect="27,31,47,69" img0="27,0,47,38" img1="27,0,47,38" img2="27,0,47,38|1,1" align="上左" close="22"/>
+  <item id="3" name="备份" type="button" rect="93,1105,624,1176" img0="93,1074,624,1145" img1="93,1074,624,1145" img2="93,1074,624,1145|1,1" align="上右"/>
+  <item id="4" name="教程" type="button" rect="0,1213,196,1247" img0="260,1182,456,1216" img1="260,1182,456,1216" img2="260,1182,456,1216|1,1" align="下中"/>
+ </win>
+
+ <win id="23" name="助记" tex="ui/23.png">
+  <item id="0" name="白板" type="picture" rect="0,0,720,1280" img0="1,1,2,2" style="缩放"/>
+  <item id="1" name="换号" type="picture" rect="290,77,459,111" img0="1,247,171,281" align="上中"/>
+  <item id="2" name="线条" type="picture" rect="0,139,720,140" img0="345,252,346,253" style="缩放" align="上中"/>
+  <item id="3" name="换号" type="picture" rect="84,200,656,346" img0="1,1,573,147" align="上中"/>
+  <item id="4" name="助主" type="picture" rect="44,380,706,580" img0="410,257,422,269" style="9宫" align="上中"/>
+  <item id="5" name="助副" type="picture" rect="44,600,706,800" img0="410,257,422,269" style="9宫" align="上中"/>
+  <item id="6" name="关闭" type="button" rect="44,76,63,113" img0="173,245,192,282" img1="173,245,192,282" img2="173,245,192,282|1,1" align="上左" close="23"/>
+  <item id="7" name="下步" type="button" rect="0,1148,572,1222" img0="196,249,279,277" img1="196,249,279,277" img2="196,249,279,277|1,1" im3g="577,1,674,127" align="下中"/>
+  <item id="8" name="助主" type="listbox" rect="50,386,700,574" align="上中"/>
+  <item id="9" name="助副" type="listbox" rect="50,606,700,794" align="上中"/>
+ </win>
+
+ <win id="24" name="助验" tex="ui/23.png">
+  <item id="0" name="白板" type="picture" rect="0,0,720,1280" img0="1,1,2,2" style="缩放"/>
+  <item id="1" name="换号" type="picture" rect="290,77,459,111" img0="1,247,171,281" align="上中"/>
+  <item id="2" name="线条" type="picture" rect="0,139,720,140" img0="345,252,346,253" style="缩放" align="上中"/>
+  <item id="3" name="换号" type="picture" rect="84,200,656,296" img0="1,149,584,245" align="上中"/>
+  <item id="4" name="线条" type="picture" rect="44,320,706,520" img0="410,257,422,269" style="9宫" align="上中"/>
+  <item id="5" name="关闭" type="button" rect="44,76,63,113" img0="173,245,192,282" img1="173,245,192,282" img2="173,245,192,282|1,1" align="上左" close="24"/>
+  <item id="6" name="确认" type="button" rect="0,1180,572,1254" img0="283,249,339,277" img1="283,249,339,277" img2="283,249,339,277|1,1" im3g="577,1,674,127" align="下中"/>
+  <item id="7" name="私钥" type="label" rect="50,326,700,514" font="#000000#18" align="上中"/>
+  <item id="8" name="信息" type="label" rect="40,1140,650,1160" font="#000000#14"/>
+
+  <item id="9"  name="A" type="button" rect="4,550,137,626" img0="1,285,134,361" img1="1,285,134,361" img2="1,285,134,361|1,1" align="上中"/>
+  <item id="10" name="B" type="button" rect="149,550,282,626" img0="146,285,279,361" img1="146,285,279,361" img2="146,285,279,361|1,1" align="上中"/>
+  <item id="11" name="C" type="button" rect="294,550,427,626" img0="291,285,424,361" img1="291,285,424,361" img2="291,285,424,361|1,1" align="上中"/>
+  <item id="12" name="D" type="button" rect="439,550,572,626" img0="436,285,569,361" img1="436,285,569,361" img2="436,285,569,361|1,1" align="上中"/>
+
+  <item id="13" name="E" type="button" rect="4,646,137,722" img0="1,381,134,457" img1="1,381,134,457" img2="1,381,134,457|1,1" align="上中"/>
+  <item id="14" name="F" type="button" rect="149,646,282,722" img0="146,381,279,457" img1="146,381,279,457" img2="146,381,279,457|1,1" align="上中"/>
+  <item id="15" name="G" type="button" rect="294,646,427,722" img0="291,381,424,457" img1="291,381,424,457" img2="291,381,424,457|1,1" align="上中"/>
+  <item id="16" name="H" type="button" rect="439,646,572,722" img0="436,381,569,457" img1="436,381,569,457" img2="436,381,569,457|1,1" align="上中"/>
+  <item id="17" name="I" type="button" rect="584,646,717,722" img0="581,381,714,457" img1="581,381,714,457" img2="581,381,714,457|1,1" align="上中"/>
+
+  <item id="18" name="J" type="button" rect="4,742,137,818" img0="1,477,134,553" img1="1,477,134,553" img2="1,477,134,553|1,1" align="上中"/>
+  <item id="19" name="K" type="button" rect="149,742,282,818" img0="146,477,279,553" img1="146,477,279,553" img2="146,477,279,553|1,1" align="上中"/>
+  <item id="20" name="L" type="button" rect="294,742,427,818" img0="291,477,424,553" img1="291,477,424,553" img2="291,477,424,553|1,1" align="上中"/>
+  <item id="21" name="M" type="button" rect="439,742,572,818" img0="436,477,569,553" img1="436,477,569,553" img2="436,477,569,553|1,1" align="上中"/>
+  <item id="22" name="N" type="button" rect="584,742,717,818" img0="581,477,714,553" img1="581,477,714,553" img2="581,477,714,553|1,1" align="上中"/>
+
+  <item id="23" name="O" type="button" rect="4,838,137,914" img0="1,573,134,649" img1="1,573,134,649" img2="1,573,134,649|1,1" align="上中"/>
+  <item id="24" name="P" type="button" rect="149,838,282,914" img0="146,573,279,649" img1="146,573,279,649" img2="146,573,279,649|1,1" align="上中"/>
+  <item id="25" name="Q" type="button" rect="294,838,427,914" img0="291,573,424,649" img1="291,573,424,649" img2="291,573,424,649|1,1" align="上中"/>
+  <item id="26" name="R" type="button" rect="439,838,572,914" img0="436,573,569,649" img1="436,573,569,649" img2="436,573,569,649|1,1" align="上中"/>
+  <item id="27" name="S" type="button" rect="584,838,717,914" img0="581,573,714,649" img1="581,573,714,649" img2="581,573,714,649|1,1" align="上中"/>
+
+  <item id="28" name="T" type="button" rect="4,934,137,1010" img0="1,669,134,745" img1="1,669,134,745" img2="1,669,134,745|1,1" align="上中"/>
+  <item id="29" name="U" type="button" rect="149,934,282,1010" img0="146,669,279,745" img1="146,669,279,745" img2="146,669,279,745|1,1" align="上中"/>
+  <item id="30" name="V" type="button" rect="294,934,427,1010" img0="291,669,424,745" img1="291,669,424,745" img2="291,669,424,745|1,1" align="上中"/>
+  <item id="31" name="W" type="button" rect="439,934,572,1010" img0="436,669,569,745" img1="436,669,569,745" img2="436,669,569,745|1,1" align="上中"/>
+
+  <item id="32" name="X" type="button" rect="4,1030,137,1106" img0="1,765,134,841" img1="1,765,134,841" img2="1,765,134,841|1,1" align="上中"/>
+  <item id="33" name="Y" type="button" rect="149,1030,282,1106" img0="146,765,279,841" img1="146,765,279,841" img2="146,765,279,841|1,1" align="上中"/>
+  <item id="34" name="Z" type="button" rect="294,1030,427,1106" img0="291,765,424,841" img1="291,765,424,841" img2="291,765,424,841|1,1" align="上中"/>
+
+  <item id="35" name="<" type="button" rect="584,550,717,626" img0="581,285,714,361" img1="581,285,714,361" img2="581,285,714,361|1,1" align="上中"/>
+  <item id="36" name=" " type="button" rect="439,1030,572,1106" img0="436,765,569,841" img1="436,765,569,841" img2="436,765,569,841|1,1" align="上中"/>
+  <item id="37" name=" " type="button" rect="584,1030,717,1106" img0="581,765,714,841" img1="581,765,714,841" img2="581,765,714,841|1,1" align="上中"/>
+  <item id="38" name=" " type="button" rect="584,934,717,1010" img0="436,669,569,745" img1="436,669,569,745" img2="436,669,569,745|1,1" align="上中"/>
+ </win>
+
+ <win id="25" name="助验" tex="ui/23.png">
+  <item id="0" name="白板" type="picture" rect="0,0,720,1280" img0="1,1,2,2" style="缩放"/>
+  <item id="1" name="换号" type="picture" rect="290,77,459,111" img0="1,247,171,281" align="上中"/>
+  <item id="2" name="线条" type="picture" rect="0,139,720,140" img0="345,252,346,253" style="缩放" align="上中"/>
+  <item id="3" name="换号" type="picture" rect="84,200,656,296" img0="1,149,584,245" align="上中"/>
+  <item id="4" name="线条" type="picture" rect="44,320,706,520" img0="410,257,422,269" style="9宫" align="上中"/>
+  <item id="5" name="关闭" type="button" rect="44,76,63,113" img0="173,245,192,282" img1="173,245,192,282" img2="173,245,192,282|1,1" align="上左" close="25"/>
+  <item id="6" name="确认" type="button" rect="0,1180,572,1254" img0="283,249,339,277" img1="283,249,339,277" img2="283,249,339,277|1,1" im3g="577,1,674,127" align="下中"/>
+  <item id="7" name="私钥" type="label" rect="50,326,700,514" font="#000000#18" align="上中"/>
+  <item id="8" name="信息" type="label" rect="40,1140,650,1160" font="#000000#14"/>
+
+  <item id="9"  name="A" type="button" rect="4,550,137,626" img0="1,285,134,361" img1="1,285,134,361" img2="1,285,134,361|1,1" align="上中"/>
+  <item id="10" name="B" type="button" rect="149,550,282,626" img0="146,285,279,361" img1="146,285,279,361" img2="146,285,279,361|1,1" align="上中"/>
+  <item id="11" name="C" type="button" rect="294,550,427,626" img0="291,285,424,361" img1="291,285,424,361" img2="291,285,424,361|1,1" align="上中"/>
+  <item id="12" name="D" type="button" rect="439,550,572,626" img0="436,285,569,361" img1="436,285,569,361" img2="436,285,569,361|1,1" align="上中"/>
+
+  <item id="13" name="E" type="button" rect="4,646,137,722" img0="1,381,134,457" img1="1,381,134,457" img2="1,381,134,457|1,1" align="上中"/>
+  <item id="14" name="F" type="button" rect="149,646,282,722" img0="146,381,279,457" img1="146,381,279,457" img2="146,381,279,457|1,1" align="上中"/>
+  <item id="15" name="G" type="button" rect="294,646,427,722" img0="291,381,424,457" img1="291,381,424,457" img2="291,381,424,457|1,1" align="上中"/>
+  <item id="16" name="H" type="button" rect="439,646,572,722" img0="436,381,569,457" img1="436,381,569,457" img2="436,381,569,457|1,1" align="上中"/>
+  <item id="17" name="I" type="button" rect="584,646,717,722" img0="581,381,714,457" img1="581,381,714,457" img2="581,381,714,457|1,1" align="上中"/>
+
+  <item id="18" name="J" type="button" rect="4,742,137,818" img0="1,477,134,553" img1="1,477,134,553" img2="1,477,134,553|1,1" align="上中"/>
+  <item id="19" name="K" type="button" rect="149,742,282,818" img0="146,477,279,553" img1="146,477,279,553" img2="146,477,279,553|1,1" align="上中"/>
+  <item id="20" name="L" type="button" rect="294,742,427,818" img0="291,477,424,553" img1="291,477,424,553" img2="291,477,424,553|1,1" align="上中"/>
+  <item id="21" name="M" type="button" rect="439,742,572,818" img0="436,477,569,553" img1="436,477,569,553" img2="436,477,569,553|1,1" align="上中"/>
+  <item id="22" name="N" type="button" rect="584,742,717,818" img0="581,477,714,553" img1="581,477,714,553" img2="581,477,714,553|1,1" align="上中"/>
+
+  <item id="23" name="O" type="button" rect="4,838,137,914" img0="1,573,134,649" img1="1,573,134,649" img2="1,573,134,649|1,1" align="上中"/>
+  <item id="24" name="P" type="button" rect="149,838,282,914" img0="146,573,279,649" img1="146,573,279,649" img2="146,573,279,649|1,1" align="上中"/>
+  <item id="25" name="Q" type="button" rect="294,838,427,914" img0="291,573,424,649" img1="291,573,424,649" img2="291,573,424,649|1,1" align="上中"/>
+  <item id="26" name="R" type="button" rect="439,838,572,914" img0="436,573,569,649" img1="436,573,569,649" img2="436,573,569,649|1,1" align="上中"/>
+  <item id="27" name="S" type="button" rect="584,838,717,914" img0="581,573,714,649" img1="581,573,714,649" img2="581,573,714,649|1,1" align="上中"/>
+
+  <item id="28" name="T" type="button" rect="4,934,137,1010" img0="1,669,134,745" img1="1,669,134,745" img2="1,669,134,745|1,1" align="上中"/>
+  <item id="29" name="U" type="button" rect="149,934,282,1010" img0="146,669,279,745" img1="146,669,279,745" img2="146,669,279,745|1,1" align="上中"/>
+  <item id="30" name="V" type="button" rect="294,934,427,1010" img0="291,669,424,745" img1="291,669,424,745" img2="291,669,424,745|1,1" align="上中"/>
+  <item id="31" name="W" type="button" rect="439,934,572,1010" img0="436,669,569,745" img1="436,669,569,745" img2="436,669,569,745|1,1" align="上中"/>
+
+  <item id="32" name="X" type="button" rect="4,1030,137,1106" img0="1,765,134,841" img1="1,765,134,841" img2="1,765,134,841|1,1" align="上中"/>
+  <item id="33" name="Y" type="button" rect="149,1030,282,1106" img0="146,765,279,841" img1="146,765,279,841" img2="146,765,279,841|1,1" align="上中"/>
+  <item id="34" name="Z" type="button" rect="294,1030,427,1106" img0="291,765,424,841" img1="291,765,424,841" img2="291,765,424,841|1,1" align="上中"/>
+
+  <item id="35" name="<" type="button" rect="584,550,717,626" img0="581,285,714,361" img1="581,285,714,361" img2="581,285,714,361|1,1" align="上中"/>
+  <item id="36" name=" " type="button" rect="439,1030,572,1106" img0="436,765,569,841" img1="436,765,569,841" img2="436,765,569,841|1,1" align="上中"/>
+  <item id="37" name=" " type="button" rect="584,1030,717,1106" img0="581,765,714,841" img1="581,765,714,841" img2="581,765,714,841|1,1" align="上中"/>
+  <item id="38" name=" " type="button" rect="584,934,717,1010" img0="436,669,569,745" img1="436,669,569,745" img2="436,669,569,745|1,1" align="上中"/>
+ </win>
+
+ <win id="26" name="助验" tex="ui/23.png">
+  <item id="0" name="白板" type="picture" rect="0,0,720,1280" img0="1,1,2,2" style="缩放"/>
+  <item id="1" name="换号" type="picture" rect="290,77,459,111" img0="1,247,171,281" align="上中"/>
+  <item id="2" name="线条" type="picture" rect="0,139,720,140" img0="345,252,346,253" style="缩放" align="上中"/>
+  <item id="3" name="换号" type="picture" rect="84,200,656,296" img0="1,149,584,245" align="上中"/>
+  <item id="4" name="线条" type="picture" rect="44,320,706,520" img0="410,257,422,269" style="9宫" align="上中"/>
+  <item id="5" name="关闭" type="button" rect="44,76,63,113" img0="173,245,192,282" img1="173,245,192,282" img2="173,245,192,282|1,1" align="上左" close="26"/>
+  <item id="6" name="确认" type="button" rect="0,1180,572,1254" img0="283,249,339,277" img1="283,249,339,277" img2="283,249,339,277|1,1" im3g="577,1,674,127" align="下中"/>
+  <item id="7" name="私钥" type="label" rect="50,326,700,514" font="#000000#18" align="上中"/>
+  <item id="8" name="信息" type="label" rect="40,1140,650,1160" font="#000000#14"/>
+
+  <item id="9"  name="A" type="button" rect="4,550,137,626" img0="1,285,134,361" img1="1,285,134,361" img2="1,285,134,361|1,1" align="上中"/>
+  <item id="10" name="B" type="button" rect="149,550,282,626" img0="146,285,279,361" img1="146,285,279,361" img2="146,285,279,361|1,1" align="上中"/>
+  <item id="11" name="C" type="button" rect="294,550,427,626" img0="291,285,424,361" img1="291,285,424,361" img2="291,285,424,361|1,1" align="上中"/>
+  <item id="12" name="D" type="button" rect="439,550,572,626" img0="436,285,569,361" img1="436,285,569,361" img2="436,285,569,361|1,1" align="上中"/>
+
+  <item id="13" name="E" type="button" rect="4,646,137,722" img0="1,381,134,457" img1="1,381,134,457" img2="1,381,134,457|1,1" align="上中"/>
+  <item id="14" name="F" type="button" rect="149,646,282,722" img0="146,381,279,457" img1="146,381,279,457" img2="146,381,279,457|1,1" align="上中"/>
+  <item id="15" name="G" type="button" rect="294,646,427,722" img0="291,381,424,457" img1="291,381,424,457" img2="291,381,424,457|1,1" align="上中"/>
+  <item id="16" name="H" type="button" rect="439,646,572,722" img0="436,381,569,457" img1="436,381,569,457" img2="436,381,569,457|1,1" align="上中"/>
+  <item id="17" name="I" type="button" rect="584,646,717,722" img0="581,381,714,457" img1="581,381,714,457" img2="581,381,714,457|1,1" align="上中"/>
+
+  <item id="18" name="J" type="button" rect="4,742,137,818" img0="1,477,134,553" img1="1,477,134,553" img2="1,477,134,553|1,1" align="上中"/>
+  <item id="19" name="K" type="button" rect="149,742,282,818" img0="146,477,279,553" img1="146,477,279,553" img2="146,477,279,553|1,1" align="上中"/>
+  <item id="20" name="L" type="button" rect="294,742,427,818" img0="291,477,424,553" img1="291,477,424,553" img2="291,477,424,553|1,1" align="上中"/>
+  <item id="21" name="M" type="button" rect="439,742,572,818" img0="436,477,569,553" img1="436,477,569,553" img2="436,477,569,553|1,1" align="上中"/>
+  <item id="22" name="N" type="button" rect="584,742,717,818" img0="581,477,714,553" img1="581,477,714,553" img2="581,477,714,553|1,1" align="上中"/>
+
+  <item id="23" name="O" type="button" rect="4,838,137,914" img0="1,573,134,649" img1="1,573,134,649" img2="1,573,134,649|1,1" align="上中"/>
+  <item id="24" name="P" type="button" rect="149,838,282,914" img0="146,573,279,649" img1="146,573,279,649" img2="146,573,279,649|1,1" align="上中"/>
+  <item id="25" name="Q" type="button" rect="294,838,427,914" img0="291,573,424,649" img1="291,573,424,649" img2="291,573,424,649|1,1" align="上中"/>
+  <item id="26" name="R" type="button" rect="439,838,572,914" img0="436,573,569,649" img1="436,573,569,649" img2="436,573,569,649|1,1" align="上中"/>
+  <item id="27" name="S" type="button" rect="584,838,717,914" img0="581,573,714,649" img1="581,573,714,649" img2="581,573,714,649|1,1" align="上中"/>
+
+  <item id="28" name="T" type="button" rect="4,934,137,1010" img0="1,669,134,745" img1="1,669,134,745" img2="1,669,134,745|1,1" align="上中"/>
+  <item id="29" name="U" type="button" rect="149,934,282,1010" img0="146,669,279,745" img1="146,669,279,745" img2="146,669,279,745|1,1" align="上中"/>
+  <item id="30" name="V" type="button" rect="294,934,427,1010" img0="291,669,424,745" img1="291,669,424,745" img2="291,669,424,745|1,1" align="上中"/>
+  <item id="31" name="W" type="button" rect="439,934,572,1010" img0="436,669,569,745" img1="436,669,569,745" img2="436,669,569,745|1,1" align="上中"/>
+
+  <item id="32" name="X" type="button" rect="4,1030,137,1106" img0="1,765,134,841" img1="1,765,134,841" img2="1,765,134,841|1,1" align="上中"/>
+  <item id="33" name="Y" type="button" rect="149,1030,282,1106" img0="146,765,279,841" img1="146,765,279,841" img2="146,765,279,841|1,1" align="上中"/>
+  <item id="34" name="Z" type="button" rect="294,1030,427,1106" img0="291,765,424,841" img1="291,765,424,841" img2="291,765,424,841|1,1" align="上中"/>
+
+  <item id="35" name="<" type="button" rect="584,550,717,626" img0="581,285,714,361" img1="581,285,714,361" img2="581,285,714,361|1,1" align="上中"/>
+  <item id="36" name=" " type="button" rect="439,1030,572,1106" img0="436,765,569,841" img1="436,765,569,841" img2="436,765,569,841|1,1" align="上中"/>
+  <item id="37" name=" " type="button" rect="584,1030,717,1106" img0="581,765,714,841" img1="581,765,714,841" img2="581,765,714,841|1,1" align="上中"/>
+  <item id="38" name=" " type="button" rect="584,934,717,1010" img0="436,669,569,745" img1="436,669,569,745" img2="436,669,569,745|1,1" align="上中"/>
+ </win>
+
+ <win id="27" name="助验" tex="ui/23.png">
+  <item id="0" name="白板" type="picture" rect="0,0,720,1280" img0="1,1,2,2" style="缩放"/>
+  <item id="1" name="换号" type="picture" rect="290,77,459,111" img0="1,247,171,281" align="上中"/>
+  <item id="2" name="线条" type="picture" rect="0,139,720,140" img0="345,252,346,253" style="缩放" align="上中"/>
+  <item id="3" name="换号" type="picture" rect="84,180,656,276" img0="1,149,584,245" align="上中"/>
+  <item id="4" name="线条" type="picture" rect="44,320,706,520" img0="410,257,422,269" style="9宫" align="上中"/>
+  <item id="5" name="关闭" type="button" rect="44,76,63,113" img0="173,245,192,282" img1="173,245,192,282" img2="173,245,192,282|1,1" align="上左" close="27"/>
+  <item id="6" name="确认" type="button" rect="0,1180,572,1254" img0="283,249,339,277" img1="283,249,339,277" img2="283,249,339,277|1,1" im3g="577,1,674,127" align="下中"/>
+  <item id="7" name="私钥" type="label" rect="50,326,700,514" font="#000000#18" align="上中"/>
+  <item id="8" name="信息" type="label" rect="40,1140,650,1160" font="#000000#14"/>
+
+  <item id="9"  name="A" type="button" rect="4,550,137,626" img0="1,285,134,361" img1="1,285,134,361" img2="1,285,134,361|1,1" align="上中"/>
+  <item id="10" name="B" type="button" rect="149,550,282,626" img0="146,285,279,361" img1="146,285,279,361" img2="146,285,279,361|1,1" align="上中"/>
+  <item id="11" name="C" type="button" rect="294,550,427,626" img0="291,285,424,361" img1="291,285,424,361" img2="291,285,424,361|1,1" align="上中"/>
+  <item id="12" name="D" type="button" rect="439,550,572,626" img0="436,285,569,361" img1="436,285,569,361" img2="436,285,569,361|1,1" align="上中"/>
+
+  <item id="13" name="E" type="button" rect="4,646,137,722" img0="1,381,134,457" img1="1,381,134,457" img2="1,381,134,457|1,1" align="上中"/>
+  <item id="14" name="F" type="button" rect="149,646,282,722" img0="146,381,279,457" img1="146,381,279,457" img2="146,381,279,457|1,1" align="上中"/>
+  <item id="15" name="G" type="button" rect="294,646,427,722" img0="291,381,424,457" img1="291,381,424,457" img2="291,381,424,457|1,1" align="上中"/>
+  <item id="16" name="H" type="button" rect="439,646,572,722" img0="436,381,569,457" img1="436,381,569,457" img2="436,381,569,457|1,1" align="上中"/>
+  <item id="17" name="I" type="button" rect="584,646,717,722" img0="581,381,714,457" img1="581,381,714,457" img2="581,381,714,457|1,1" align="上中"/>
+
+  <item id="18" name="J" type="button" rect="4,742,137,818" img0="1,477,134,553" img1="1,477,134,553" img2="1,477,134,553|1,1" align="上中"/>
+  <item id="19" name="K" type="button" rect="149,742,282,818" img0="146,477,279,553" img1="146,477,279,553" img2="146,477,279,553|1,1" align="上中"/>
+  <item id="20" name="L" type="button" rect="294,742,427,818" img0="291,477,424,553" img1="291,477,424,553" img2="291,477,424,553|1,1" align="上中"/>
+  <item id="21" name="M" type="button" rect="439,742,572,818" img0="436,477,569,553" img1="436,477,569,553" img2="436,477,569,553|1,1" align="上中"/>
+  <item id="22" name="N" type="button" rect="584,742,717,818" img0="581,477,714,553" img1="581,477,714,553" img2="581,477,714,553|1,1" align="上中"/>
+
+  <item id="23" name="O" type="button" rect="4,838,137,914" img0="1,573,134,649" img1="1,573,134,649" img2="1,573,134,649|1,1" align="上中"/>
+  <item id="24" name="P" type="button" rect="149,838,282,914" img0="146,573,279,649" img1="146,573,279,649" img2="146,573,279,649|1,1" align="上中"/>
+  <item id="25" name="Q" type="button" rect="294,838,427,914" img0="291,573,424,649" img1="291,573,424,649" img2="291,573,424,649|1,1" align="上中"/>
+  <item id="26" name="R" type="button" rect="439,838,572,914" img0="436,573,569,649" img1="436,573,569,649" img2="436,573,569,649|1,1" align="上中"/>
+  <item id="27" name="S" type="button" rect="584,838,717,914" img0="581,573,714,649" img1="581,573,714,649" img2="581,573,714,649|1,1" align="上中"/>
+
+  <item id="28" name="T" type="button" rect="4,934,137,1010" img0="1,669,134,745" img1="1,669,134,745" img2="1,669,134,745|1,1" align="上中"/>
+  <item id="29" name="U" type="button" rect="149,934,282,1010" img0="146,669,279,745" img1="146,669,279,745" img2="146,669,279,745|1,1" align="上中"/>
+  <item id="30" name="V" type="button" rect="294,934,427,1010" img0="291,669,424,745" img1="291,669,424,745" img2="291,669,424,745|1,1" align="上中"/>
+  <item id="31" name="W" type="button" rect="439,934,572,1010" img0="436,669,569,745" img1="436,669,569,745" img2="436,669,569,745|1,1" align="上中"/>
+
+  <item id="32" name="X" type="button" rect="4,1030,137,1106" img0="1,765,134,841" img1="1,765,134,841" img2="1,765,134,841|1,1" align="上中"/>
+  <item id="33" name="Y" type="button" rect="149,1030,282,1106" img0="146,765,279,841" img1="146,765,279,841" img2="146,765,279,841|1,1" align="上中"/>
+  <item id="34" name="Z" type="button" rect="294,1030,427,1106" img0="291,765,424,841" img1="291,765,424,841" img2="291,765,424,841|1,1" align="上中"/>
+
+  <item id="35" name="<" type="button" rect="584,550,717,626" img0="581,285,714,361" img1="581,285,714,361" img2="581,285,714,361|1,1" align="上中"/>
+  <item id="36" name=" " type="button" rect="439,1030,572,1106" img0="436,765,569,841" img1="436,765,569,841" img2="436,765,569,841|1,1" align="上中"/>
+  <item id="37" name=" " type="button" rect="584,1030,717,1106" img0="581,765,714,841" img1="581,765,714,841" img2="581,765,714,841|1,1" align="上中"/>
+  <item id="38" name=" " type="button" rect="584,934,717,1010" img0="436,669,569,745" img1="436,669,569,745" img2="436,669,569,745|1,1" align="上中"/>
+ </win>
+
+ <win id="30" name="代币" tex="ui/30.png" align="居中" black="true">
+  <item id="0" name="背景" type="picture" rect="0,0,510,640" img0="0,0,510,640"/>
+  <item id="1" name="bci " type="label"  rect="245,263,500,283" font="#BBBBBB#20"/>
+  <item id="2" name="ico " type="label"  rect="245,323,500,343" font="#BBBBBB#20"/>
+  <item id="3" name="增发" type="flash"  rect="245,383,275,403" img0="1,642,31,669" img1="51,642,81,669"/>
+  <item id="4" name="关闭" type="button" rect="280,455,421,498" img0="280,455,421,498" img1="280,455,421,498" img2="280,455,421,498|1,1" close="30"/>
+  <item id="5" name="确定" type="button" rect="90,455,231,498" img0="90,455,231,498" img1="90,455,231,498" img2="90,455,231,498|1,1"/>
+ </win>
+
+ <win id="31" name="代币" tex="ui/31.png" align="居中" black="true">
+  <item id="0" name="背景" type="picture" rect="0,0,510,640" img0="0,0,510,640"/>
+ </win>
+
+ <win id="200" tex="ui/200.png" align="居中">
+  <item id="0" type="picture" rect="0,0,10512,5000" img0="1,1,2,2" style="图片"/>
+  <item id="1" type="picture" rect="0,5256,10512,10256" img0="1,1,2,2" style="图片"/>
+  <item id="2" type="picture" rect="0,5000,5000,5256" img0="1,1,2,2" style="图片"/>
+  <item id="3" type="picture" rect="5512,5000,10512,5256" img0="1,1,2,2" style="图片"/>
+  <item id="4" type="picture" rect="5000,5000,5512,5256" img0="0,0,512,256"/>
+ </win>
+</ui>
