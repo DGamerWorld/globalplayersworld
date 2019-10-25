@@ -1,0 +1,49 @@
+<message>
+ <msg id="0"	text="成功"/>
+ <msg id="1"	text="块信息已处理成功"/>
+ <msg id="3"	text="交易需要主私钥"/>
+ <msg id="4"	text="发款方签名需要副私钥"/>
+
+ <msg id="5"	text="块数据大小不对"/>
+ <msg id="8"	text="bci为空"/>
+ <msg id="9"	text="交易ID为空"/>
+ <msg id="10"	text="公钥为空"/>
+
+ <msg id="16"	text="打开文件失败"/>
+
+ <msg id="24"	text="锁定30秒后限制接下来30秒内上锁"/>
+ <msg id="25"	text="其他人已上锁了"/>
+
+ <msg id="32"	text="区块链标示为空"/>
+ <msg id="33"	text="交易ID为空"/>
+ <msg id="33"	text="没有创建日期"/>
+ <msg id="34"	text="没有转出金额"/>
+ <msg id="36"	text="钱包地址为空"/>
+ <msg id="37"	text="第三方钱包地址检测错误"/>
+ <msg id="38"	text="接受方还没签名，同时只能一笔交易"/>
+ <msg id="39"	text="发送方或第三方都没签名，同时只能一笔交易"/>
+ <msg id="40"	text="交易的找零地址必须加一"/>
+ <msg id="41"	text="账单起始位置不等"/>
+ <msg id="42"	text="交易金额不足"/>
+ <msg id="43"	text="所有账单签名验证失败"/>
+ <msg id="44"	text="公钥对应钱包地址失败"/>
+ <msg id="45"	text="发送方签名验证失败"/>
+ <msg id="46"	text="交易ID验证失败"/>
+
+ <msg id=""	text=""/>
+ <msg id=""	text=""/>
+ <msg id=""	text=""/>
+ <msg id=""	text=""/>
+ <msg id=""	text=""/>
+ <msg id=""	text=""/>
+ <msg id=""	text=""/>
+ <msg id=""	text=""/>
+ <msg id=""	text=""/>
+ <msg id=""	text=""/>
+ <msg id=""	text=""/>
+ <msg id=""	text=""/>
+ <msg id=""	text=""/>
+ <msg id=""	text=""/>
+ <msg id=""	text=""/>
+ <msg id=""	text=""/>
+</message>
